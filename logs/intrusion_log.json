@@ -1,0 +1,22 @@
+[
+  {
+    "timestamp": "2026-04-26T09:53:27.719438",
+    "source_ip": "127.0.0.1",
+    "user_agent": "Werkzeug/3.1.8",
+    "path": "/admin",
+    "method": "GET",
+    "attack_classification": "UNAUTHORIZED_ENTRY",
+    "severity": "HIGH",
+    "softlock_triggered": true
+  },
+  {
+    "timestamp": "2026-04-26T09:57:17.318429",
+    "source_ip": "127.0.0.1",
+    "user_agent": "Werkzeug/3.1.8",
+    "path": "/admin",
+    "method": "GET",
+    "attack_classification": "UNAUTHORIZED_ENTRY",
+    "severity": "HIGH",
+    "softlock_triggered": true
+  }
+]
