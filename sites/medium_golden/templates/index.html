@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Medium Golden Site</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #1a1a2e; color: #eee; max-width: 800px; margin: 60px auto; padding: 24px; }
+    nav a { color: #4caf50; margin-right: 16px; text-decoration: none; }
+    h1 { color: #4caf50; }
+    code { background: #0f3460; padding: 2px 8px; border-radius: 4px; }
+    ul li { margin-bottom: 8px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/login">Login</a>
+    <a href="/api/data">API Data</a>
+    <a href="/api/users">API Users</a>
+    <a href="/health">Health</a>
+  </nav>
+  <h1>Medium Golden Site</h1>
+  <p>Fixed and secure version of the Medium vulnerable site.</p>
+  <ul>
+    <li><code>GET /api/data</code> returns result safely with null check</li>
+    <li><code>POST /login</code> uses parameterized queries</li>
+    <li><code>/dashboard</code> session persists correctly</li>
+    <li><code>POST /chat</code> blocks jailbreak attempts</li>
+  </ul>
+</body>
+</html>
