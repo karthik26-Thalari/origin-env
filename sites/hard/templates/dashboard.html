@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard -- Hard Site</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0d0d0d; color: #eee; max-width: 800px; margin: 60px auto; padding: 24px; }
+    h1 { color: #ff4444; }
+    .card { background: #1a1a1a; padding: 20px; border-radius: 8px; margin-top: 20px; border: 1px solid #333; }
+    code { background: #111; padding: 2px 8px; border-radius: 4px; color: #ff4444; }
+  </style>
+  <script src="/static/app.js"></script>
+</head>
+<body>
+  <h1>Dashboard</h1>
+  <p>Welcome, <strong>{{ user.username }}</strong> ({{ user.role }})</p>
+
+  <!-- BUG: user.profile_picture is not defined -- crashes with UndefinedError -->
+  <img src="{{ user.profile_picture }}" alt="Profile" width="80" />
+
+  <div class="card">
+    <h2>Links</h2>
+    <p><a href="/admin" style="color:#ff4444">Admin Panel</a></p>
+    <p><a href="/admin?admin=true" style="color:#ff4444">Admin Bypass (no session needed)</a></p>
+    <p><a href="/api/export?file=requirements.txt" style="color:#ff4444">Export File</a></p>
+    <p><a href="/api/users" style="color:#ff4444">All Users</a></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin -- Hard Site</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0d0d0d; color: #eee; max-width: 800px; margin: 60px auto; padding: 24px; }
+    h1 { color: #ff4444; }
+    .bypass { background: #3a0000; border: 1px solid #ff4444; padding: 12px; border-radius: 6px; margin-bottom: 20px; color: #ff6b6b; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 10px 14px; border: 1px solid #333; text-align: left; }
+    th { background: #1a1a1a; color: #ff4444; }
+    tr:nth-child(even) { background: #111; }
+  </style>
+</head>
+<body>
+  <h1>Admin Panel</h1>
+
+  {% if bypass %}
+  <div class="bypass">
+    AUTH BYPASSED via ?admin=true -- no session cookie was required to reach this page.
+  </div>
+  {% endif %}
+
+  <table>
+    <tr><th>ID</th><th>Username</th><th>Role</th></tr>
+    {% for u in users %}
+    <tr><td>{{ u.id }}</td><td>{{ u.username }}</td><td>{{ u.role }}</td></tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

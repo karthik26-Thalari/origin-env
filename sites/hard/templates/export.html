@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Export -- Hard Site</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0d0d0d; color: #eee; max-width: 800px; margin: 60px auto; padding: 24px; }
+    h1 { color: #ff4444; }
+    .warn { background: #3a0000; border: 1px solid #ff4444; padding: 12px; border-radius: 6px; margin-bottom: 20px; color: #ff6b6b; }
+    pre { background: #111; padding: 20px; border-radius: 6px; overflow-x: auto; white-space: pre-wrap; border: 1px solid #333; }
+  </style>
+</head>
+<body>
+  <h1>File Export</h1>
+  <div class="warn">PATH TRAVERSAL VULNERABILITY -- file contents served with no sanitization</div>
+  <p>File: <code>{{ filename }}</code></p>
+  <pre>{{ contents }}</pre>
+</body>
+</html>
