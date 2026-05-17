@@ -1,4 +1,4 @@
-﻿---
+---
 title: OriginEnv
 emoji: 🛡️
 colorFrom: red
@@ -17,88 +17,8 @@ pinned: true
 
 | Resource | Link |
 |---|---|
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-| 🤗 HuggingFace Space |https://huggingface.co/spaces/Destiny04/origin-env|
-| 📓 Colab Notebook |https://colab.research.google.com/drive/1t9BYCPsLUPScRUmnCSp8EPzKTBJusVhZ?usp=sharing|
+| 🤗 HuggingFace Space | https://huggingface.co/spaces/Destiny04/origin-env |
+| 📓 Colab Notebook | https://colab.research.google.com/drive/1t9BYCPsLUPScRUmnCSp8EPzKTBJusVhZ?usp=sharing |
 | 📝 HF Blog Post | https://huggingface.co/spaces/Destiny04/origin-env-blog |
 
 ---
@@ -165,6 +85,7 @@ OriginEnv
 ### Curriculum Learning
 
 | Episodes | Difficulty Pool |
+|---|---|
 | 1-20 | Easy + Medium + Hard |
 
 ### Recovery System
