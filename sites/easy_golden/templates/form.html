@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form -- Golden Site</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/form">Form</a>
+    <a href="/about">About</a>
+    <a href="/health">Health</a>
+  </nav>
+  <main>
+    <h1>Submit a Message</h1>
+    <form method="POST" action="/form">
+      <textarea name="message" rows="4" cols="50" placeholder="Type a message..."></textarea><br /><br />
+      <button type="submit">Send</button>
+    </form>
+    {% if reflected %}
+    <hr />
+    <h2>Server Response:</h2>
+    <!-- FIX: reflected is escaped server-side, no |safe filter used -->
+    {{ reflected }}
+    {% endif %}
+  </main>
+</body>
+</html>
