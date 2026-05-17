@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin -- Hard Golden</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0d0d0d; color: #eee; max-width: 800px; margin: 60px auto; padding: 24px; }
+    h1 { color: #4caf50; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 10px 14px; border: 1px solid #333; text-align: left; }
+    th { background: #1a1a1a; color: #4caf50; }
+    tr:nth-child(even) { background: #111; }
+    .secure { background: #003300; border: 1px solid #4caf50; padding: 12px; border-radius: 6px; margin-bottom: 20px; color: #4caf50; }
+  </style>
+</head>
+<body>
+  <h1>Admin Panel</h1>
+  <!-- FIX: no bypass banner -- ?admin=true no longer works -->
+  <div class="secure">Access granted via session only. No query param bypass possible.</div>
+  <table>
+    <tr><th>ID</th><th>Username</th><th>Role</th></tr>
+    {% for u in users %}
+    <tr><td>{{ u.id }}</td><td>{{ u.username }}</td><td>{{ u.role }}</td></tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

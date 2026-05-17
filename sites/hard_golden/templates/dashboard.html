@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard -- Hard Golden</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0d0d0d; color: #eee; max-width: 800px; margin: 60px auto; padding: 24px; }
+    h1 { color: #4caf50; }
+    .card { background: #1a1a1a; padding: 20px; border-radius: 8px; margin-top: 20px; border: 1px solid #333; }
+    code { background: #111; padding: 2px 8px; border-radius: 4px; color: #4caf50; }
+    button { padding: 10px 20px; background: #4caf50; border: none; border-radius: 4px; color: #fff; cursor: pointer; }
+    button:hover { background: #388e3c; }
+    #api-result { color: #4caf50; margin-top: 10px; }
+    .avatar { width: 80px; height: 80px; border-radius: 50%; background: #4caf50; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 12px; }
+  </style>
+  <script src="/static/app.js"></script>
+</head>
+<body>
+  <h1>Dashboard</h1>
+
+  <!-- FIX: profile_picture has a default value -- no UndefinedError -->
+  {% if user.profile_picture %}
+  <div class="avatar">{{ user.username[0].upper() }}</div>
+  {% else %}
+  <div class="avatar">?</div>
+  {% endif %}
+
+  <p>Welcome, <strong>{{ user.username }}</strong> ({{ user.role }})</p>
+
+  <div class="card">
+    <h2>API Test</h2>
+    <p>Calls <code>/api/data</code> -- correct endpoint, returns valid data.</p>
+    <button onclick="callApi()">Call API</button>
+    <div id="api-result"></div>
+  </div>
+
+  <div class="card">
+    <h2>Links</h2>
+    <p><a href="/admin" style="color:#4caf50">Admin Panel (session required)</a></p>
+    <p><a href="/api/export?file=sample.txt" style="color:#4caf50">Export sample.txt</a></p>
+    <p><a href="/api/users" style="color:#4caf50">All Users</a></p>
+  </div>
+</body>
+</html>

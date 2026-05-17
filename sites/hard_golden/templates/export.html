@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Export -- Hard Golden</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0d0d0d; color: #eee; max-width: 800px; margin: 60px auto; padding: 24px; }
+    h1 { color: #4caf50; }
+    .secure { background: #003300; border: 1px solid #4caf50; padding: 12px; border-radius: 6px; margin-bottom: 20px; color: #4caf50; }
+    pre { background: #111; padding: 20px; border-radius: 6px; overflow-x: auto; white-space: pre-wrap; border: 1px solid #333; }
+  </style>
+</head>
+<body>
+  <h1>File Export</h1>
+  <div class="secure">Path traversal blocked -- only files inside /exports/ directory are accessible.</div>
+  <p>File: <code>{{ filename }}</code></p>
+  <pre>{{ contents }}</pre>
+</body>
+</html>
