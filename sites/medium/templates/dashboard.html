@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #1a1a2e; color: #eee; max-width: 800px; margin: 60px auto; padding: 24px; }
+    h1 { color: #e94560; }
+    .card { background: #16213e; padding: 20px; border-radius: 8px; margin-top: 20px; }
+    code { background: #0f3460; padding: 2px 8px; border-radius: 4px; }
+    button { padding: 10px 20px; background: #e94560; border: none; border-radius: 4px; color: #fff; cursor: pointer; }
+    #api-result { color: #ff6b6b; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Dashboard</h1>
+  <p>Welcome, <strong>{{ user }}</strong>!</p>
+  <div class="card">
+    <h2>API Test</h2>
+    <p>Calls <code>/api/wrong-endpoint</code> -- guaranteed 404.</p>
+    <button onclick="callBadApi()">Call Wrong API</button>
+    <div id="api-result"></div>
+  </div>
+  <div class="card">
+    <h2>Session Bug</h2>
+    <p>Refresh this page and you will be logged out -- session clears on every request.</p>
+  </div>
+  <script>
+    function callBadApi() {
+      fetch("/api/wrong-endpoint")
+        .then(r => {
+          document.getElementById("api-result").textContent = "Status: " + r.status + " (404 bug confirmed)";
+        })
+        .catch(e => {
+          document.getElementById("api-result").textContent = "Error: " + e;
+        });
+    }
+  </script>
+</body>
+</html>
