@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openenv-origin_env"
+version = "1.0.0"
+description = "OriginEnv - RL environment for simultaneous UI repair, security patching, and jailbreak defense"
+requires-python = ">=3.10"
+dependencies = [
+    "openenv-core>=0.2.2",
+    "flask",
+    "requests",
+    "beautifulsoup4",
+    "huggingface_hub",
+]
+
+[project.scripts]
+server = "origin_env.server.app:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["origin_env", "origin_env.server"]
+package-dir = {"origin_env" = ".", "origin_env.server" = "server"}
