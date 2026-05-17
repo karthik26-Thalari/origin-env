@@ -1,0 +1,25 @@
+﻿name: origin-env
+version: "3.0"
+description: "RL environment training LLMs for simultaneous UI repair, security patching, and jailbreak defense"
+themes:
+  - wild_card
+  - world_modeling_professional
+  - multi_agent
+entry: origin_env.py
+class: OriginEnv
+base_class: openenv.env.Env
+gym_compatible: true
+reset_returns: observation_dict
+step_returns: [observation, reward, done, info]
+episode_max_length: 20
+difficulty_levels:
+  - easy
+  - medium
+  - hard
+task_modes:
+  - LEGACY
+  - AI_CHATBOT
+  - STANDARD
+rubric_items: 15
+reward_range: [-50, 51]
+curriculum: true

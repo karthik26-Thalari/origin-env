@@ -1,0 +1,7 @@
+﻿venv/
+__pycache__/
+*.pyc
+snapshots/
+*.db
+.pytest_cache/
+rewards.csv

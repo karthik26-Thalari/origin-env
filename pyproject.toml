@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "origin-env"
+version = "3.0.0"
+description = "RL environment for UI repair, security patching, jailbreak defense"
+requires-python = ">=3.9"
+dependencies = [
+    "flask",
+    "requests",
+    "beautifulsoup4",
+    "playwright",
+    "openenv-core",
+    "huggingface_hub",
+    "matplotlib",
+    "pandas",
+    "pytest",
+]
+
+[project.scripts]
+server = "origin_env.server.app:main"

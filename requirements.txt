@@ -1,0 +1,7 @@
+gradio>=4.0.0
+flask
+requests
+beautifulsoup4
+playwright
+openenv-core
+huggingface_hub
