@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Easy Vulnerable Site</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a> <a href="/form">Form</a>
+    <a href="/about">About</a> <a href="/health">Health</a>
+  </nav>
+  <main>
+    <h1>Welcome to the Easy Vulnerable Site</h1>
+    <p>Intentionally broken for RL training.</p>
+    <!-- BUG: file does not exist -->
+    <img src="/static/missing.png" alt="Missing image" width="200" />
+    <p>Try the <a href="/form">form</a> or POST to <code>/chat</code>.</p>
+  </main>
+  <script>
+    // BUG: fires on every page load
+    console.error("BUG: intentional error on page load");
+  </script>
+</body>
+</html>

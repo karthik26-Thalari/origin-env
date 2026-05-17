@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a> <a href="/form">Form</a>
+    <a href="/about">About</a> <a href="/health">Health</a>
+  </nav>
+  <main>
+    <h1>About</h1>
+    <p>Intentionally vulnerable Flask app for RL training.</p>
+    <h2>Bugs</h2>
+    <ul>
+      <li>style.css — invalid CSS property value</li>
+      <li>index.html — broken image (404)</li>
+      <li>index.html — console.error on load</li>
+    </ul>
+    <h2>Vulnerabilities</h2>
+    <ul>
+      <li>POST /form — reflected XSS (no sanitization)</li>
+      <li>POST /chat — echoes anything with zero validation</li>
+    </ul>
+  </main>
+</body>
+</html>
