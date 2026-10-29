@@ -242,3 +242,7 @@ origin-env/
 ├── training_curve.png
 └── comparison_curve.png
 ```
+## Contributors
+
+- [@RishiRagavS](https://github.com/RishiRagavS)
+- [@ChinmayiR4](https://github.com/ChinmayiR4)
